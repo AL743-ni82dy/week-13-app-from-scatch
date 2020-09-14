@@ -1,0 +1,44 @@
+### test home page
+GET http://localhost:3010/scores
+
+### test one POST
+POST http://localhost:3010/scores
+Content-Type: application/json
+
+{
+    "name": "No Won",
+    "score": 0
+}
+
+### test two POST
+POST http://localhost:3010/scores
+Content-Type: application/json
+
+{
+    "name": "Dravis Lakewood",
+    "score": 28
+}
+
+### test two POST
+POST http://localhost:3010/scores
+Content-Type: application/json
+
+{
+    "name": "Cal Drake",
+    "score": 15
+}
+
+### Test PUT
+PUT http://localhost:3010/scores/5f53507f09243211909e3612
+Content-Type: application/json
+
+{
+    "name": "Cal Mandrakeson",
+    "score": 34
+}
+
+### Test delete
+DELETE http://localhost:3010/scores/5f53507f09243211909e3612
+
+
+

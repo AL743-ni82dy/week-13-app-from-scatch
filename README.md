@@ -1,71 +1,68 @@
-# Create an App using Express and React from Scratch
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Let's goooooo!
+## Available Scripts
 
-## Why
+In the project directory, you can run:
 
-Watching videos, listening to instructors, reading tutorials online, and any actions that do not consist of you writing code will only get you so far. To be a successful programmer, you need lots of daily hands-on practice. Solving lots of code challenges.  Work on at least one personal project.
+### `npm start`
 
-## How
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You will review what you know and apply it to building your own app.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-- Express for your API
-- Mongo for your db
-- React for your front-end
+### `npm test`
 
-Use the slide decks and the previous repositories as your help to complete the coding steps.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Ask your group, any TAs, the instructor, etc for any help you need. We're in this together to all be full stack developers that can create any app we can dream of.
+### `npm run build`
 
-## All Together
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Setup a personal mongodb in the cloud
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-<https://mlab.com/>
-<https://www.mongodb.com/>
-<https://www.mongodb.com/cloud/atlas/signup>
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
 
-## Instructions
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### Step 1
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Identify an app you want to build.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Ideas
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-- Your favorite hobby
-- -> cooking, sewing, baking, running, shopping, skiing
+## Learn More
 
-- Your Job
-- -> Tracking projects, issues, data, etc
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-- Charity
-- Track charities or identify an app charities may need
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- Anything! at all can be used for your app idea
+### Code Splitting
 
-## Step 2
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-NOTE: Commit to git early and often. Push to your personal repository often.
+### Analyzing the Bundle Size
 
-Create your PR early as early as you can.
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-Create an express api
+### Making a Progressive Web App
 
-Create http files to test your api
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-## Step 3
+### Advanced Configuration
 
-NOTE: Commit to git early and often. Push to your personal repository often, especially before each step.
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-Create a react UI
+### Deployment
 
-Create test files for your UI (more on this this week!)
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-## Step 4
+### `npm run build` fails to minify
 
-NOTE: Commit to git early and often. Push to your personal repository often, especially before each step.
-
-Deploy your app to the world (more on this this week!)
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
