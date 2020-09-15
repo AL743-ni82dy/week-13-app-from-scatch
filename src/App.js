@@ -4,10 +4,16 @@ import {
   Switch,
   Route,
   Link
-} from "react-router-dom"
+} from "react-router-dom";
+import HiScores from './hiScores';
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {name: '', score: ''};
+  };
+
   return (
     <Router>
       <div>
@@ -22,18 +28,19 @@ function App() {
         <hr />
         <Switch>
           <Route exact path="/">
-            <div>
-              <h2>greeting</h2>
-              <h2>score list here</h2>
-            </div>
+            <h3>Greetings!</h3>
+            <HiScores />
           </Route>
           <Route exact path="/game">
             <h3>put game here</h3>
+            <input onChange={this.handleChange.bind(this)} />
+            <input name={this.state.input} />
           </Route>
         </Switch>
       </div>
     </Router>
   );
+  
 }
 
 export default App;
