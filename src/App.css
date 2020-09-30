@@ -4,3 +4,16 @@
 ul {
   color: green;
 }
+
+input {
+  width: 60px;
+  margin: 5px;
+}
+
+button {
+  margin: 10px;
+}
+
+span {
+  margin: 0px 5px;
+}

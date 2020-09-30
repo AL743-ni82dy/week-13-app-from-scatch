@@ -21,6 +21,15 @@ async function deleteScore(id) {
         _id: new ObjectID(id)
     })
 }
+// deleteByNameScore not working
+async function deleteByNameScore(req, resp) {
+    const database = await getDatabase();
+    const {name, score} = req.body
+    await database.collection(mongoName).findOneAndDelete({
+        name: name,
+        score: score
+    })
+}
 
 async function updateScore(id, score) {
     const database = await getDatabase();
@@ -40,4 +49,5 @@ module.exports = {
     getScores,
     deleteScore,
     updateScore,
+    deleteByNameScore
 }

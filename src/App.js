@@ -6,24 +6,24 @@ import {
   Link
 } from "react-router-dom";
 import HiScores from './hiScores';
+import PlayGame from './playGame';
+import ScoreDebugger from './scoreDebugger'
 import './App.css';
 
-class App extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {name: '', score: ''};
-  };
-
+export default function App () {
   return (
     <Router>
       <div>
         <ul>
-          <li>
+          <span>
             <Link to="/">Scores</Link>
-          </li>
-          <li>
+          </span>
+          <span>
             <Link to="/game">Game</Link>
-          </li>
+          </span>
+          <span>
+            <Link to="/debugger">debugger</Link>
+          </span>
         </ul>
         <hr />
         <Switch>
@@ -31,10 +31,11 @@ class App extends React.Component {
             <h3>Greetings!</h3>
             <HiScores />
           </Route>
-          <Route exact path="/game">
-            <h3>put game here</h3>
-            <input onChange={this.handleChange.bind(this)} />
-            <input name={this.state.input} />
+          <Route path="/game">
+            <PlayGame />
+          </Route>
+          <Route exact path="/debugger">
+            <ScoreDebugger />
           </Route>
         </Switch>
       </div>
@@ -42,5 +43,3 @@ class App extends React.Component {
   );
   
 }
-
-export default App;

@@ -24,12 +24,12 @@ POST http://localhost:3010/scores
 Content-Type: application/json
 
 {
-    "name": "Cal Drake",
-    "score": 15
+    "name": "Echo Millidottir",
+    "score": 43
 }
 
 ### Test PUT
-PUT http://localhost:3010/scores/5f53507f09243211909e3612
+PUT http://localhost:3010/scores/5f6bccf2b0e1cd0ce47242f7
 Content-Type: application/json
 
 {
@@ -38,7 +38,14 @@ Content-Type: application/json
 }
 
 ### Test delete
-DELETE http://localhost:3010/scores/5f53507f09243211909e3612
+DELETE http://localhost:3010/scores/5f73d94f9f7bc722cc6b1225
 
 
+### Test delete by name
+DELETE http://localhost:3010/scores/
+Content-Type: application/json
 
+{
+    "name": "Echo Millidottir",
+    "score": 43
+}

@@ -1,4 +1,5 @@
 // index.js
+const PORT = 3010
 const { app,
     startDatabase,
 } = require('./app-common.js')
@@ -17,6 +18,6 @@ startDatabase().then(async () => {
     console.log("error occurred")
 })
 
-app.listen(3010, async () => {
-    console.log('web server started on port 3010 http://localhost:3010')
+app.listen(PORT, async () => {
+    console.log('web server started on http://localhost:' + PORT)
 })
