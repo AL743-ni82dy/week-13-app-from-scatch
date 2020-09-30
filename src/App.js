@@ -19,7 +19,7 @@ export default function App () {
             <Link to="/">Scores</Link>
           </span>
           <span>
-            <Link to="/game">Game</Link>
+            <Link to="/game">New Game</Link>
           </span>
           <span>
             <Link to="/debugger">debugger</Link>

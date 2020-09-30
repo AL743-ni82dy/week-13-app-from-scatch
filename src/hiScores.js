@@ -1,4 +1,5 @@
 import React from 'react'
+import { scoreSort } from './Utility'
 
 class HiScores extends React.Component {
     constructor () {
@@ -19,16 +20,24 @@ class HiScores extends React.Component {
     render () {
         const { response } = this.state
         const itemsList = []
+        const sortedScores = scoreSort(response)
 
-        for (const [index, item] of response.entries()) {
+        for (const [index, item] of sortedScores.entries()) {
             itemsList.push(<li key={index}>
                 {item.name}: {item.score}
             </li>)
         }
+/*
+        for (let index = 0;index < sortedScores.length; index++) {
+            itemsList.push(<li key={index}>
+                {sortedScores[index]}
+            </li>)
+        }
+        */
         return (
             <div>
                 <ul>
-                    <h3>Scores</h3>
+                    <h3>Top Scores (Lower is better)</h3>
                     {itemsList}
                 </ul>
             </div>

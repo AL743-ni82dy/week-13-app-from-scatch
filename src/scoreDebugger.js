@@ -1,6 +1,6 @@
 import React from 'react'
 import GetInput from './getInput'
-import { postScore, getScores, findId, deleteOne } from './Utility.js';
+import { postScore, getScores, findId, deleteOne, findAllIds } from './Utility.js';
 
 class ScoreDebugger extends React.Component {
     constructor (props) {
@@ -33,12 +33,23 @@ class ScoreDebugger extends React.Component {
         const result = await getScores()
         this.setState({response: result})
     }
+
     handleDelete = async () => {
         if (this.state.name.length === 0) {
             this.setState({response: 'Please input name'})    
         } else {
             const id = await findId(this.state.name, this.state.score)
             const result = await deleteOne(id)
+            this.setState({response: result})
+        }
+        this.setState({response: 'All Scores Deleted'})
+    }
+
+    handleDeleteAll = async () => {
+        const allIds = await findAllIds()
+        let result = ''
+        for(let index = 0;index < allIds.length; index++) {
+            result = await deleteOne(allIds[index])
             this.setState({response: result})
         }
     }
@@ -54,6 +65,7 @@ class ScoreDebugger extends React.Component {
                 <button type="button" onClick={this.handlePost}>post</button>
                 <button type="button" onClick={this.handleGet}>get scores</button>
                 <button type="button" onClick={this.handleDelete}>Delete</button>
+                <button type="button" onClick={this.handleDeleteAll}>Delete All</button>
                 <div>{this.state.response}</div>
             </form>
         )
