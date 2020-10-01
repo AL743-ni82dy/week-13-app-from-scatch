@@ -1,9 +1,7 @@
 import React from 'react'
 
 class GetInput extends React.Component {
-    constructor (props) {
-        super(props)
-    }
+
     inputChange = (input) => {
         this.props.onInputChange(input.target.value);
     }

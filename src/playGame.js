@@ -1,20 +1,13 @@
 import React from 'react'
 import Main from './theGame/Components/Main'
 
-class PlayGame extends React.Component {
-    constructor (props) {
-        super(props)
-    }
+ function PlayGame() {
 
-    // JR suggested changing div to a form
-    render () {
-        return (
-            <div>
-                <Main />
-            </div>
-        )
-    }
-
+    return (
+        <div>
+            <Main />
+        </div>
+    )
 }
 
 export default PlayGame;

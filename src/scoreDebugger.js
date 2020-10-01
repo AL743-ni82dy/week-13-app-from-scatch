@@ -31,6 +31,7 @@ class ScoreDebugger extends React.Component {
     handleGet = async () => {
         // alert('click event get one');
         const result = await getScores()
+        
         this.setState({response: result})
     }
 
@@ -41,8 +42,7 @@ class ScoreDebugger extends React.Component {
             const id = await findId(this.state.name, this.state.score)
             const result = await deleteOne(id)
             this.setState({response: result})
-        }
-        this.setState({response: 'All Scores Deleted'})
+        }  
     }
 
     handleDeleteAll = async () => {
@@ -52,6 +52,7 @@ class ScoreDebugger extends React.Component {
             result = await deleteOne(allIds[index])
             this.setState({response: result})
         }
+        this.setState({response: 'All Scores Deleted'})
     }
 
     // JR suggested changing div to a form
@@ -70,7 +71,6 @@ class ScoreDebugger extends React.Component {
             </form>
         )
     }
-
 }
 
 export default ScoreDebugger;

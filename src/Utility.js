@@ -32,7 +32,7 @@ export const getScores = async () => {
         itemsList.push(item.score)
     }
 
-    return itemsList
+    return itemsList.toString()
     // return theResponse.status
 }
 
@@ -90,10 +90,8 @@ export const findAllIds = async () => {
 }
 
 // sort score array-n.b. lower is better
-// input array is a list of objects [ {name: score}, {name: socre}]
 export const scoreSort = (array) => {
-    const topLimit = 5
-    const arrayCopy = array
+    const topLimit = 10
     let validLimit = 0
     let foundBefore = 0
     let prevValue = -1
